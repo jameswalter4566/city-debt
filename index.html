@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Enrollment - City Debt | Debt Relief Solutions</title>
+    <meta name="description" content="Reduce up to 45% of your debt with City Debt's proven debt relief program.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <a href="/" class="logo">
+                <svg viewBox="0 0 180 40" class="logo-svg">
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#0052CC"/>
+                            <stop offset="50%" style="stop-color:#0065FF"/>
+                            <stop offset="100%" style="stop-color:#FF5630"/>
+                        </linearGradient>
+                    </defs>
+                    <rect x="0" y="8" width="6" height="24" fill="#0052CC"/>
+                    <rect x="10" y="4" width="6" height="32" fill="#0065FF"/>
+                    <rect x="20" y="12" width="6" height="20" fill="#FF5630"/>
+                    <text x="35" y="28" font-family="Inter, sans-serif" font-weight="700" font-size="22" fill="#172B4D">CITY DEBT</text>
+                </svg>
+            </a>
+            <div class="header-contact">
+                <a href="tel:+18005551234" class="help-btn">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                    </svg>
+                    <span class="help-text">Need Help? <strong>Call 1-800-555-1234</strong></span>
+                </a>
+            </div>
+        </header>
+
+        <!-- Progress Stepper -->
+        <div class="progress-container">
+            <div class="progress-stepper">
+                <div class="step completed" data-step="1">
+                    <div class="step-indicator">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                        </svg>
+                    </div>
+                    <div class="step-content">
+                        <span class="step-label">Your Details</span>
+                        <span class="step-time">2 min</span>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step active" data-step="2">
+                    <div class="step-indicator">2</div>
+                    <div class="step-content">
+                        <span class="step-label">Your Plan</span>
+                        <span class="step-time">3 min</span>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step" data-step="3">
+                    <div class="step-indicator">3</div>
+                    <div class="step-content">
+                        <span class="step-label">Program Setup</span>
+                        <span class="step-time">2 min</span>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step" data-step="4">
+                    <div class="step-indicator">4</div>
+                    <div class="step-content">
+                        <span class="step-label">Bank Verification</span>
+                        <span class="step-time">2 min</span>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step" data-step="5">
+                    <div class="step-indicator">5</div>
+                    <div class="step-content">
+                        <span class="step-label">Review & Sign</span>
+                        <span class="step-time">1 min</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content - Step Screens -->
+        <main class="main-content">
+            <!-- Screen 1: Video Intro -->
+            <section class="screen screen-video active" id="screen-1">
+                <h1 class="screen-title">Congratulations!<br>We have a special offer for you.</h1>
+
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <video id="intro-video" poster="video-poster.jpg">
+                            <source src="intro-video.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-overlay" id="video-overlay">
+                            <button class="play-btn" id="play-btn">
+                                <svg viewBox="0 0 24 24" width="64" height="64" fill="white">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                                <span>Play</span>
+                            </button>
+                        </div>
+                        <div class="video-caption" id="video-caption"></div>
+                    </div>
+                </div>
+
+                <div class="trustpilot-badge">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="#00B67A">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                    <span>We are proud to have <strong>over 12,000 positive reviews</strong> on Trustpilot</span>
+                </div>
+
+                <button class="primary-btn disabled" id="next-btn-1" disabled>
+                    Please watch the full video before continuing
+                </button>
+            </section>
+
+            <!-- Screen 2: Debt Situation -->
+            <section class="screen screen-debt" id="screen-2">
+                <h1 class="screen-title">
+                    <span class="user-name">John</span>,<br>
+                    This is Your <span class="highlight">Current Debt Situation</span>
+                </h1>
+                <p class="screen-subtitle">Based on your credit report, you have 2 debt accounts eligible for resolution.</p>
+
+                <div class="info-alert">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="#0065FF">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                    </svg>
+                    <p>This breakdown shows all of your eligible accounts. If you would like to edit your accounts, please contact customer service after enrollment.</p>
+                </div>
+
+                <div class="debt-layout">
+                    <div class="debt-accounts">
+                        <!-- Account Card 1 -->
+                        <div class="account-card">
+                            <div class="account-header">
+                                <div class="account-badge">AM</div>
+                                <span class="account-name">AMEX</span>
+                                <span class="account-amount">$6,666.00</span>
+                            </div>
+                            <div class="account-details">
+                                <div class="detail-item">
+                                    <span class="detail-label">Utilization</span>
+                                    <span class="detail-value">0%</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Min.Payment</span>
+                                    <span class="detail-value">$202.76</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Interest</span>
+                                    <span class="detail-value">$12,934.63</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">All Payments</span>
+                                    <span class="detail-value">$19,600.63</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Payoff</span>
+                                    <span class="detail-value">26 years 3 months</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Account Card 2 -->
+                        <div class="account-card">
+                            <div class="account-header">
+                                <div class="account-badge cc">CC</div>
+                                <span class="account-name">CCB/FE21CC</span>
+                                <span class="account-amount">$328.00</span>
+                            </div>
+                            <div class="account-details">
+                                <div class="detail-item">
+                                    <span class="detail-label">Utilization</span>
+                                    <span class="detail-value">205%</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Min.Payment</span>
+                                    <span class="detail-value">$15.00</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Interest</span>
+                                    <span class="detail-value">$110.96</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">All Payments</span>
+                                    <span class="detail-value">$438.96</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Payoff</span>
+                                    <span class="detail-value">2 years 6 months</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="debt-summary">
+                        <h3 class="summary-title">YOUR DEBT SUMMARY</h3>
+                        <div class="summary-row">
+                            <span class="summary-label">Total Debt</span>
+                            <span class="summary-value">$6,994.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span class="summary-label">Utilization</span>
+                            <span class="summary-value">103%</span>
+                        </div>
+                        <div class="summary-row">
+                            <span class="summary-label">Min.Monthly Payment</span>
+                            <span class="summary-value">$217.76</span>
+                        </div>
+                        <div class="summary-row">
+                            <span class="summary-label">Interest Paid</span>
+                            <span class="summary-value">$13,045.59</span>
+                        </div>
+                        <div class="summary-row">
+                            <span class="summary-label">Total Payments</span>
+                            <span class="summary-value">$20,039.59</span>
+                        </div>
+                        <div class="summary-row">
+                            <span class="summary-label">Total Payoff</span>
+                            <span class="summary-value highlight">28 years 9 months</span>
+                        </div>
+                        <p class="summary-note">This covers all eligible debt. Excluded accounts cannot be resolved in this program.</p>
+                    </div>
+                </div>
+
+                <button class="primary-btn" id="next-btn-2">
+                    Let's calculate your savings
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                        <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                    </svg>
+                </button>
+            </section>
+
+            <!-- Screen 3: Credit Utilization -->
+            <section class="screen screen-credit" id="screen-3">
+                <h1 class="screen-title">Your Credit Utilization<br>and Credit Score</h1>
+                <p class="screen-subtitle">This is an overview of your current situation.<br>It doesn't have to stay this way. City Debt Advantage can help.</p>
+
+                <div class="utilization-card">
+                    <div class="utilization-header">
+                        <span class="utilization-label">Your Utilization Score</span>
+                        <span class="utilization-value">205 %</span>
+                        <span class="status-badge very-poor">Very Poor</span>
+                    </div>
+                    <div class="utilization-bar">
+                        <div class="bar-labels">
+                            <span>75+</span>
+                            <span>50-74%</span>
+                            <span>30-49%</span>
+                            <span>10-29%</span>
+                            <span>0-9%</span>
+                        </div>
+                        <div class="bar-track">
+                            <div class="bar-segment red"></div>
+                            <div class="bar-segment orange"></div>
+                            <div class="bar-segment yellow"></div>
+                            <div class="bar-segment lime"></div>
+                            <div class="bar-segment green"></div>
+                        </div>
+                        <div class="bar-indicator" style="left: 5%;"></div>
+                    </div>
+                </div>
+
+                <div class="metrics-table">
+                    <div class="metric-row">
+                        <span class="metric-label">Total Outstanding Unsecured Debt</span>
+                        <span class="metric-value">$6,994.00</span>
+                        <span class="status-badge poor">Poor</span>
+                    </div>
+                    <div class="metric-row">
+                        <span class="metric-label">Debt to Income Ratio</span>
+                        <span class="metric-value">0%</span>
+                        <span class="status-badge excellent">Excellent</span>
+                    </div>
+                    <div class="metric-row">
+                        <span class="metric-label">Accounts in Collections</span>
+                        <span class="metric-value">0</span>
+                        <span class="status-badge excellent">Excellent</span>
+                    </div>
+                    <div class="metric-row">
+                        <span class="metric-label">Number of Open Active Accounts</span>
+                        <span class="metric-value">3</span>
+                        <span class="status-badge fair">Fair</span>
+                    </div>
+                    <div class="metric-row">
+                        <span class="metric-label">Number of Inquiries</span>
+                        <span class="metric-value">4</span>
+                        <span class="status-badge fair">Fair</span>
+                    </div>
+                </div>
+
+                <div class="credit-score-card">
+                    <div class="credit-score-header">
+                        <span class="credit-score-label">Credit score</span>
+                        <span class="status-badge poor">Poor</span>
+                    </div>
+                    <p class="credit-score-desc">Here's your credit score, also known as YOUR FICO score.</p>
+                    <div class="gauge-container">
+                        <svg viewBox="0 0 200 120" class="gauge">
+                            <defs>
+                                <linearGradient id="gaugeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#FF5630"/>
+                                    <stop offset="25%" style="stop-color:#FF8B00"/>
+                                    <stop offset="50%" style="stop-color:#FFAB00"/>
+                                    <stop offset="75%" style="stop-color:#36B37E"/>
+                                    <stop offset="100%" style="stop-color:#00875A"/>
+                                </linearGradient>
+                            </defs>
+                            <path d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="#E5E7EB" stroke-width="12" stroke-linecap="round"/>
+                            <path d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="url(#gaugeGradient)" stroke-width="12" stroke-linecap="round"/>
+                            <text x="100" y="95" text-anchor="middle" font-size="36" font-weight="600" fill="#172B4D">0</text>
+                        </svg>
+                    </div>
+                </div>
+
+                <button class="primary-btn" id="next-btn-3">
+                    Let's calculate your savings
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                        <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                    </svg>
+                </button>
+            </section>
+
+            <!-- Screen 4: Comparison -->
+            <section class="screen screen-compare" id="screen-4">
+                <h1 class="screen-title">How the City Debt Advantage Program<br>Compares to Your Current Minimum<br>Payment Plan</h1>
+                <p class="screen-subtitle">Lower your monthly payments, save thousands in interest, and pay off your debt faster.</p>
+
+                <div class="comparison-layout">
+                    <div class="charts-container">
+                        <div class="chart-group">
+                            <h4 class="chart-title">MONTHLY PAYMENTS</h4>
+                            <div class="bar-chart">
+                                <div class="bar current" style="height: 90%;">
+                                    <span class="bar-value">$217.76</span>
+                                </div>
+                                <div class="bar program" style="height: 92%;">
+                                    <span class="bar-value highlight">$218.06</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-group">
+                            <h4 class="chart-title">TOTAL COST</h4>
+                            <div class="bar-chart">
+                                <div class="bar current" style="height: 100%;">
+                                    <span class="bar-value">$20,039.59</span>
+                                </div>
+                                <div class="bar program" style="height: 32%;">
+                                    <span class="bar-value highlight">$6,323.46</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-group">
+                            <h4 class="chart-title">PAYOFF TIME</h4>
+                            <div class="bar-chart">
+                                <div class="bar current" style="height: 100%;">
+                                    <span class="bar-value">26 years 3 months</span>
+                                </div>
+                                <div class="bar program" style="height: 10%;">
+                                    <span class="bar-value highlight">2 years 6 months</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="savings-card">
+                        <h3 class="savings-title">YOUR ESTIMATED SAVINGS</h3>
+                        <div class="savings-row">
+                            <span class="savings-value">$13,716.13</span>
+                            <span class="savings-label">In Total Savings</span>
+                        </div>
+                        <div class="savings-row">
+                            <span class="savings-value">23 years 9 months</span>
+                            <span class="savings-label">In Pay off Time</span>
+                        </div>
+                        <p class="savings-note">* City Debt Advantage uses estimates to calculate your program duration, costs and savings. These estimates are based on information from third parties and information you have provided. All calculations include interest and program fees.</p>
+                    </div>
+                </div>
+
+                <div class="chart-legend">
+                    <div class="legend-item">
+                        <span class="legend-dot current"></span>
+                        <span>Currently</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot program"></span>
+                        <span>with City Debt Advantage</span>
+                    </div>
+                </div>
+
+                <button class="primary-btn" id="next-btn-4">
+                    Next
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                        <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                    </svg>
+                </button>
+            </section>
+
+            <!-- Screen 5: How It Works -->
+            <section class="screen screen-how" id="screen-5">
+                <h1 class="screen-title">Here's How our Program Works</h1>
+                <p class="screen-subtitle">We act as your advocate and work with your creditors through an account that you control, saving you time and money.</p>
+
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="process-number">1</div>
+                        <h4 class="process-title">Monthly <span class="highlight">Deposits</span></h4>
+                        <p class="process-desc">Every month, you deposit money into an account that we manage for you.</p>
+                    </div>
+                    <div class="process-connector"></div>
+                    <div class="process-step">
+                        <div class="process-number">2</div>
+                        <h4 class="process-title">We <span class="highlight">Negotiate</span></h4>
+                        <p class="process-desc">We work as your advocate, managing your creditors and securing the best settlements.</p>
+                    </div>
+                    <div class="process-connector"></div>
+                    <div class="process-step">
+                        <div class="process-number">3</div>
+                        <h4 class="process-title">Debts <span class="highlight">Settle</span></h4>
+                        <p class="process-desc">When you approve an offer, we use the funds in your account to pay off your creditors until all enrolled debts are eventually settled.</p>
+                    </div>
+                    <div class="process-connector"></div>
+                    <div class="process-step">
+                        <div class="process-number">4</div>
+                        <h4 class="process-title">Debt <span class="highlight">Freedom</span></h4>
+                        <p class="process-desc">Once your debts are paid off, you will be debt-free and stress-free!</p>
+                    </div>
+                </div>
+
+                <button class="primary-btn" id="next-btn-5">
+                    Next
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                        <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                    </svg>
+                </button>
+            </section>
+        </main>
+
+        <!-- Floating Video Avatar -->
+        <div class="floating-avatar" id="floating-avatar">
+            <video id="avatar-video" muted>
+                <source src="avatar-video.mp4" type="video/mp4">
+            </video>
+            <div class="avatar-overlay" id="avatar-overlay">
+                <button class="avatar-play-btn">
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="white">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                </button>
+                <span>Play</span>
+            </div>
+            <div class="avatar-caption" id="avatar-caption"></div>
+            <button class="avatar-close" id="avatar-close">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                    <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Ask a Question Button -->
+        <button class="ask-question-btn">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+            </svg>
+            Ask a Question
+        </button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
