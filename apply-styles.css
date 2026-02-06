@@ -77,8 +77,9 @@ body {
 }
 
 .logo-img {
-    height: 48px;
+    height: 56px;
     width: auto;
+    object-fit: contain;
 }
 
 .call-btn {
