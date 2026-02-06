@@ -73,31 +73,12 @@ body {
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    text-decoration: none;
 }
 
-.logo-bars {
-    display: flex;
-    gap: 3px;
-    align-items: flex-end;
-}
-
-.bar {
-    width: 6px;
-    background: var(--navy-blue);
-    border-radius: 2px;
-}
-
-.bar-1 { height: 20px; background: #0052CC; }
-.bar-2 { height: 28px; background: #CD3935; }
-.bar-3 { height: 24px; background: #0052CC; }
-
-.logo-text {
-    font-family: var(--font-heading);
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--navy-blue);
-    letter-spacing: -0.5px;
+.logo-img {
+    height: 48px;
+    width: auto;
 }
 
 .call-btn {
